@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: go-socks5-proxy
+    env: docker
+    region: singapore  # 选择最近的区域
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: SOCKS5_USERNAME
+        sync: false
+      - key: SOCKS5_PASSWORD
+        sync: false
